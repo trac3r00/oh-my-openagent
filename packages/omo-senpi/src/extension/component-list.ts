@@ -10,6 +10,7 @@ import { createConfigWatchComponent } from "../components/config-watch"
 import { createFallbackArchitectComponent } from "../components/fallback-architect"
 import { createGitMasterAttributionComponent } from "../components/git-master"
 import { createInitDeepAdvisorComponent } from "../components/init-deep-advisor"
+import { createJevSkillAdvisorComponent } from "../components/jev-skill-advisor/component"
 import { createLspComponent } from "../components/lsp"
 import { createMemoryComponent } from "../components/memory"
 import { createModelProfileComponent } from "../components/model-profile"
@@ -41,6 +42,7 @@ export function createOmoSenpiComponents(taskComponent: OmoSenpiComponent): OmoS
     createNativeBadgeComponent(),
     createOnboardingComponent(),
     createInitDeepAdvisorComponent(),
+    createJevSkillAdvisorComponent(),
     createOmoNativeTelemetryComponent(),
     createUltraworkComponent(),
     createSkillPointersComponent(),

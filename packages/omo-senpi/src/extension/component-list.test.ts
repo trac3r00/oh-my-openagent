@@ -13,6 +13,12 @@ const taskComponent: OmoSenpiComponent = {
 }
 
 describe("createOmoSenpiComponents", () => {
+  test("#given the pilot component #when production components are assembled #then it registers once before task capture", () => {
+    const names = createOmoSenpiComponents(taskComponent).map(({ name }) => name)
+    expect(names.filter((name) => name === "jev-skill-advisor")).toEqual(["jev-skill-advisor"])
+    expect(names.indexOf("jev-skill-advisor")).toBeLessThan(names.indexOf("task"))
+  })
+
   test("#given the production registration array #when x-search is looked up #then it is present exactly once", () => {
     // given
     const names = createOmoSenpiComponents(taskComponent).map(({ name }) => name)
